@@ -80,8 +80,8 @@
     v(6pt)
   }
 
-  show heading.where(level: 2): set text(size: 字号.三号)
-  show heading.where(level: 3): set text(size: 字号.小三)
+  show heading.where(level: 2): set text(size: 字号.小三)
+  show heading.where(level: 3): set text(size: 字号.四号)
   show heading.where(level: 4): set text(size: 字号.四号)
 
 
