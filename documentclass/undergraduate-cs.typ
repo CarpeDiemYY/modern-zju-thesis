@@ -122,7 +122,7 @@
   assert(bibmode == "citext" or bibmode == "partbib")
 
   let info = undergraduate-cs-default-info + info
-  let bib = bib-provider(bibsource, mode: bibmode)
+  let bib = bib-provider(bibsource, mode: bibmode, options:(row-gutter: 0.5em,))
 
   (
     pages: (
@@ -138,7 +138,8 @@
       proposal-eval: undergraduate-proposal-eval,
     ),
     components: (
-      bibliography: bib.bibcontent,
+      bibliography: [
+        #bib.bibcontent],
       new-bib: bib.new-bib,
     ),
     style: doc => {
