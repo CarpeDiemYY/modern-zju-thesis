@@ -43,7 +43,7 @@
     image("../assets/zju-name.svg", width: page.width * 0.5)
     v(2pt)
 
-    text(size: 字号.小一, font: 字体.黑体, spacing: 200%)[本  科  生  毕 业 论 文<mzt:no-header-footer>]
+    text(size: 字号.小一, font: 字体.黑体, spacing: 200%)[本 科 生 毕 业 论 文<mzt:no-header-footer>]
 
     v(24pt)
     text(size: 字号.小一, font: 字体.黑体)[文献综述和开题报告]
@@ -69,14 +69,10 @@
             },
           ),
           row-gutter: row-gutter,
-
           "学生姓名", info.author,
-
           "学生学号", info.student-id,
-
           "指导教师", info.supervisor,
-          "年级与专业", info.grade-major.first(),
-          ..info.grade-major.slice(1).map(v => (none, v)).flatten(),
+          "年级与专业", info.grade-major,
           "所在学院", info.department,
         )
       ],
