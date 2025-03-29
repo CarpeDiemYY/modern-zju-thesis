@@ -66,17 +66,20 @@
   set heading(
     numbering: (..numbers) => {
       let level = numbers.pos().len()
-      if (level == 1) {
-        return numbering("一、", numbers.pos().at(level - 1))
-      } else {
-        return numbering("1.1  ", ..numbers.pos().slice(1))
-      }
+      return numbering("1.1  ", ..numbers.pos())
+
+      // if (level == 1) {
+      //   return numbering("1.", numbers.pos().at(level - 1))
+      // } else {
+      //   return numbering("1.1  ", ..numbers.pos().slice(1))
+      // }
     },
   )
   show heading.where(level: 1): x => {
     twoside-pagebreak
     v(12pt)
-    align(center, x)
+    x
+    // align(center, x)
     v(6pt)
   }
 
@@ -122,7 +125,7 @@
   assert(bibmode == "citext" or bibmode == "partbib")
 
   let info = undergraduate-cs-default-info + info
-  let bib = bib-provider(bibsource, mode: bibmode, options:(row-gutter: 0.5em,))
+  let bib = bib-provider(bibsource, mode: bibmode, options: (row-gutter: 0.5em))
 
   (
     pages: (
