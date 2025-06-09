@@ -21,12 +21,7 @@
     )
     #strong(
       align(right)[
-        #box(width: 2em )年#box(width: 2em)月#box(width: 2em)日],
+        #box(width: 2em)年#box(width: 2em)月#box(width: 2em)日],
     )
-
-
   ]
-  // twoside-emptypage
-  // [ #pagebreak()#[#v(100%)]<mzt:no-header-footer> ]
-  // newpage
 }
